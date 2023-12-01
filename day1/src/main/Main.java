@@ -73,12 +73,7 @@ public class Main {
                 if (!digitMatcher.find()) {
                     continue;
                 }
-
-                if (digitMatcher.group().length() == 1) {
-                    return digitMatcher.group().charAt(0);
-                }
-
-                return NAME_TO_DIGIT.get(digitMatcher.group());
+                return parseDigit(digitMatcher);
             }
         }
         return '0';
@@ -99,14 +94,17 @@ public class Main {
                 if (!digitMatcher.find()) {
                     continue;
                 }
-
-                if (digitMatcher.group().length() == 1) {
-                    return digitMatcher.group().charAt(0);
-                }
-
-                return NAME_TO_DIGIT.get(digitMatcher.group());
+                return parseDigit(digitMatcher);
             }
         }
         return '0';
+    }
+
+    private static char parseDigit(Matcher digitMatcher) {
+        if (digitMatcher.group().length() == 1) {
+            return digitMatcher.group().charAt(0);
+        }
+
+        return NAME_TO_DIGIT.get(digitMatcher.group());
     }
 }
