@@ -104,7 +104,6 @@ public class Main {
         if (digitMatcher.group().length() == 1) {
             return digitMatcher.group().charAt(0);
         }
-
         return NAME_TO_DIGIT.get(digitMatcher.group());
     }
 }
