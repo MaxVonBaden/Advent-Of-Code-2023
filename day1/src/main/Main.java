@@ -44,12 +44,12 @@ public class Main {
         while (fileScanner.hasNext()) {
             currentLine = fileScanner.nextLine();
             part1Sum += Integer.parseInt(new String(new char[]{
-                    findFirstDigit(currentLine, false),
-                    findLastDigit(currentLine, false)
+                    firstDigit(currentLine, false),
+                    lastDigit(currentLine, false)
             }));
             part2Sum += Integer.parseInt(new String(new char[]{
-                    findFirstDigit(currentLine, true),
-                    findLastDigit(currentLine, true)
+                    firstDigit(currentLine, true),
+                    lastDigit(currentLine, true)
             }));
         }
 
@@ -58,7 +58,7 @@ public class Main {
         System.out.println("Part 2: " + part2Sum);
     }
 
-    private static char findFirstDigit(String line, boolean includeDigitNames) {
+    private static char firstDigit(String line, boolean includeDigitNames) {
         if (!includeDigitNames) {
             for (char character : line.toCharArray()) {
                 if (Character.isDigit(character)) {
@@ -84,7 +84,7 @@ public class Main {
         return '0';
     }
 
-    private static char findLastDigit(String line, boolean includeDigitNames) {
+    private static char lastDigit(String line, boolean includeDigitNames) {
         if (!includeDigitNames) {
             for (int i = line.length() - 1; i >= 0; i--) {
                 if (Character.isDigit(line.charAt(i))) {
