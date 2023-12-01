@@ -8,9 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    private static final String allDigitsRegex = "one|two|three|four|five|six|seven|eight|nine|\\d";
+    private static final String ALL_DIGITS_REGEX = "one|two|three|four|five|six|seven|eight|nine|\\d";
 
-    private static final Map<String, Character> nameToDigit = Map.of(
+    private static final Map<String, Character> NAME_TO_DIGIT = Map.of(
             "one", '1',
             "two", '2',
             "three", '3',
@@ -69,7 +69,7 @@ public class Main {
             Matcher digitMatcher;
 
             for (int i = 0; i <= line.length(); i++) {
-                digitMatcher = Pattern.compile(allDigitsRegex).matcher(line.substring(0, i));
+                digitMatcher = Pattern.compile(ALL_DIGITS_REGEX).matcher(line.substring(0, i));
                 if (!digitMatcher.find()) {
                     continue;
                 }
@@ -78,7 +78,7 @@ public class Main {
                     return digitMatcher.group().charAt(0);
                 }
 
-                return nameToDigit.get(digitMatcher.group());
+                return NAME_TO_DIGIT.get(digitMatcher.group());
             }
         }
         return '0';
@@ -95,7 +95,7 @@ public class Main {
             Matcher digitMatcher;
 
             for (int i = line.length() - 1; i >= 0; i--) {
-                digitMatcher = Pattern.compile(allDigitsRegex).matcher(line.substring(i));
+                digitMatcher = Pattern.compile(ALL_DIGITS_REGEX).matcher(line.substring(i));
                 if (!digitMatcher.find()) {
                     continue;
                 }
@@ -104,7 +104,7 @@ public class Main {
                     return digitMatcher.group().charAt(0);
                 }
 
-                return nameToDigit.get(digitMatcher.group());
+                return NAME_TO_DIGIT.get(digitMatcher.group());
             }
         }
         return '0';
