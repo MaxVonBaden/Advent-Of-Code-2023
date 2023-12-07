@@ -30,4 +30,8 @@ public enum Card {
         }
         throw new IllegalArgumentException();
     }
+
+    public char getCharacter() {
+        return this.character;
+    }
 }

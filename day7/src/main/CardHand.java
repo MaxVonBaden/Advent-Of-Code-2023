@@ -2,7 +2,6 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -96,5 +95,12 @@ public class CardHand implements Comparable<CardHand> {
         Arrays.stream(Card.values()).forEach(card -> cardAmounts.put(card, 0));
         cards.forEach(card -> cardAmounts.put(card, cardAmounts.get(card) + 1));
         return cardAmounts;
+    }
+
+    public String toString() {
+        final StringBuilder result =  new StringBuilder();
+        this.cards.forEach(card -> result.append(card.getCharacter()));
+        result.append(", %s".formatted(this.type.toString()));
+        return result.toString();
     }
 }

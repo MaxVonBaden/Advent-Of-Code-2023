@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="-">
-      <change afterPath="$PROJECT_DIR$/day2/src/main/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/src/main/MainDay2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/src/main/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/src/main/resources/inputDay2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day6/src/main/MainDay6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day6/src/main/resources/inputDay6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/src/main/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/src/main/CardHand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/src/main/resouces/inputDay7.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/day1/src/main/MainDay1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/src/main/resources/testInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/day1/src/main/resources/example.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day7/src/main/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day7/src/main/CardHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/CardHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day7/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Card.executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -119,7 +110,7 @@
       <workItem from="1701881495967" duration="196000" />
       <workItem from="1701941482061" duration="713000" />
       <workItem from="1701970664725" duration="1755000" />
-      <workItem from="1701972555299" duration="3247000" />
+      <workItem from="1701972555299" duration="6012000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1701359659025</created>
@@ -191,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701432291785</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="-">
+      <option name="closed" value="true" />
+      <created>1701975872767</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701975872767</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
