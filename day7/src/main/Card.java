@@ -28,7 +28,7 @@ public enum Card {
                 return card;
             }
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException(Character.toString(character));
     }
 
     public char getCharacter() {

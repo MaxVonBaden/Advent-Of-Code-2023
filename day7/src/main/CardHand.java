@@ -9,7 +9,6 @@ import java.util.Map;
 
 public class CardHand implements Comparable<CardHand> {
     private enum HandType {
-
         HIGH_CARD(HandType::allCardsAreDistinct),
         ONE_PAIR(cards -> pairCount(cardTypeAmounts(cards)) == 1),
         TWO_PAIR(cards -> pairCount(cardTypeAmounts(cards)) == 2),
@@ -18,6 +17,11 @@ public class CardHand implements Comparable<CardHand> {
                         .filter(entry -> entry.getValue() == 3)
                         .toList().isEmpty()
         ),
+        FULL_HOUSE(cards -> cardTypeAmounts(cards).entrySet().stream()
+                .filter(entry -> entry.getValue() != 0).toList().size() == 2
+                && !cardTypeAmounts(cards).entrySet().stream()
+                .filter(entry -> entry.getValue() == 3)
+                .toList().isEmpty()),
         FOUR_OF_A_KIND(cards ->
                 !cardTypeAmounts(cards).entrySet().stream()
                         .filter(entry -> entry.getValue() == 4)
@@ -68,7 +72,7 @@ public class CardHand implements Comparable<CardHand> {
     }
 
     private HandType dominantType() {
-        for (HandType type : HandType.values()) {
+        for (HandType type : reverse(HandType.values())) {
             if (type.identifier.isOfType(this.cards)) {
                 return type;
             }
@@ -102,5 +106,14 @@ public class CardHand implements Comparable<CardHand> {
         this.cards.forEach(card -> result.append(card.getCharacter()));
         result.append(", %s".formatted(this.type.toString()));
         return result.toString();
+    }
+
+    private static HandType[] reverse(HandType[] input) {
+        final HandType[] result = new HandType[HandType.values().length];
+        for (int i = HandType.values().length - 1; i >= 0; i--) {
+            result[HandType.values().length - 1 - i] = HandType.values()[i];
+        }
+
+        return result;
     }
 }
