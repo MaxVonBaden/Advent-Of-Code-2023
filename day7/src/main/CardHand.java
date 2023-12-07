@@ -55,6 +55,15 @@ public class CardHand implements Comparable<CardHand> {
         private static boolean allCardsAreTheSame(List<Card> cards) {
             return (new HashSet<>(cards)).size() == 1;
         }
+
+        public static HandType byCardList(List<Card> cards) {
+            for (int i = HandType.values().length - 1; i >= 0; i--) {
+                if (values()[i].identifier.isOfType(cards)) {
+                    return values()[i];
+                }
+            }
+            throw new IllegalArgumentException("Something went wrong with your hand.");
+        }
     }
 
     private static final int HAND_SIZE = 5;
@@ -67,19 +76,10 @@ public class CardHand implements Comparable<CardHand> {
             throw new IllegalArgumentException("Hands must be of size %d".formatted(HAND_SIZE));
         }
         this.cards = new ArrayList<>(cards);
-        this.type = dominantType();
+        this.type = HandType.byCardList(cards);
         if (this.type == null) {
             throw new IllegalArgumentException("Something went wrong with your set of cards.");
         }
-    }
-
-    private HandType dominantType() {
-        for (HandType type : reverse(HandType.values())) {
-            if (type.identifier.isOfType(this.cards)) {
-                return type;
-            }
-        }
-        return null;
     }
 
     @Override
