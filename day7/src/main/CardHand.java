@@ -10,22 +10,24 @@ import java.util.Map;
 public class CardHand implements Comparable<CardHand> {
     private enum HandType {
         HIGH_CARD(HandType::allCardsAreDistinct),
-        ONE_PAIR(cards -> pairCount(cardTypeAmounts(cards)) == 1),
-        TWO_PAIR(cards -> pairCount(cardTypeAmounts(cards)) == 2),
+        ONE_PAIR(cards -> pairCount(cardTypeToAmountMap(cards)) == 1),
+        TWO_PAIR(cards -> pairCount(cardTypeToAmountMap(cards)) == 2),
         THREE_OF_A_KIND(cards ->
-                !cardTypeAmounts(cards).entrySet().stream()
-                        .filter(entry -> entry.getValue() == 3)
-                        .toList().isEmpty()
+                cardTypeToAmountMap(cards).entrySet().stream()
+                        .map(entry -> entry.getValue() == 3)
+                        .reduce(Boolean::logicalOr).get()
         ),
-        FULL_HOUSE(cards -> cardTypeAmounts(cards).entrySet().stream()
+        FULL_HOUSE(cards -> cardTypeToAmountMap(cards).entrySet().stream()
                 .filter(entry -> entry.getValue() != 0).toList().size() == 2
-                && !cardTypeAmounts(cards).entrySet().stream()
-                .filter(entry -> entry.getValue() == 3)
-                .toList().isEmpty()),
+                && cardTypeToAmountMap(cards).values().stream()
+                .map(cardCount -> cardCount == 3)
+                .reduce(Boolean::logicalOr).get()
+        ),
         FOUR_OF_A_KIND(cards ->
-                !cardTypeAmounts(cards).entrySet().stream()
-                        .filter(entry -> entry.getValue() == 4)
-                        .toList().isEmpty()),
+                cardTypeToAmountMap(cards).values().stream()
+                        .map(cardCount -> cardCount == 4)
+                        .reduce(Boolean::logicalOr).get()
+        ),
         FIVE_OF_A_KIND(HandType::allCardsAreTheSame);
 
         @FunctionalInterface
@@ -94,7 +96,7 @@ public class CardHand implements Comparable<CardHand> {
         return 0;
     }
 
-    private static Map<Card, Integer> cardTypeAmounts(List<Card> cards) {
+    private static Map<Card, Integer> cardTypeToAmountMap(List<Card> cards) {
         final Map<Card, Integer> cardAmounts = new HashMap<>();
         Arrays.stream(Card.values()).forEach(card -> cardAmounts.put(card, 0));
         cards.forEach(card -> cardAmounts.put(card, cardAmounts.get(card) + 1));
