@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="-" />
+    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="-">
+      <change afterPath="$PROJECT_DIR$/day2/src/main/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day2/src/main/MainDay2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day2/src/main/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day2/src/main/resources/inputDay2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day6/src/main/MainDay6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day6/src/main/resources/inputDay6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day7/src/main/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day7/src/main/CardHand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day7/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day7/src/main/resouces/inputDay7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdventOfCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day1/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/day1/src/main/MainDay1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day1/src/main/resources/testInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/day1/src/main/resources/example.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -23,41 +39,59 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2Ytyq517dABcPgqfb5GaSvrp1mi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/m1lor/IdeaProjects/AdventOfCode/day1/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Card.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last.edited.regexp": "Sample Text",
+    "last_opened_file_path": "C:/Users/m1lor/IdeaProjects/AdventOfCode/day6/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day6\src\main\resources" />
       <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day1\src\main\resources" />
       <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day7\src\main\resouces" />
+      <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day6\src\main\resources" />
+      <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day2\src\main\resources" />
       <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day1\src\main\resources" />
       <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day1\src" />
-      <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day1\src\ressources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main" />
       <recent name="" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,7 +107,19 @@
       <workItem from="1701367157924" duration="833000" />
       <workItem from="1701412198412" duration="17191000" />
       <workItem from="1701430026237" duration="587000" />
-      <workItem from="1701431816993" duration="359000" />
+      <workItem from="1701431816993" duration="1353000" />
+      <workItem from="1701445438128" duration="690000" />
+      <workItem from="1701451617193" duration="776000" />
+      <workItem from="1701456379310" duration="594000" />
+      <workItem from="1701510182756" duration="977000" />
+      <workItem from="1701549194665" duration="3408000" />
+      <workItem from="1701717225755" duration="1427000" />
+      <workItem from="1701859025122" duration="1977000" />
+      <workItem from="1701880393372" duration="726000" />
+      <workItem from="1701881495967" duration="196000" />
+      <workItem from="1701941482061" duration="713000" />
+      <workItem from="1701970664725" duration="1755000" />
+      <workItem from="1701972555299" duration="3247000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1701359659025</created>
@@ -138,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701432134167</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-">
+      <created>1701432291785</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701432291785</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

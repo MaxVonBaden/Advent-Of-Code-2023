@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Main {
+public class MainDay1 {
     private static final String ALL_DIGITS_REGEX = "one|two|three|four|five|six|seven|eight|nine|\\d";
 
     private static final Map<String, Character> NAME_TO_DIGIT = Map.of(
@@ -36,6 +36,7 @@ public class Main {
             return;
         }
 
+        final long startTime = System.currentTimeMillis();
         int part1Sum = 0;
         int part2Sum = 0;
 
@@ -54,8 +55,12 @@ public class Main {
         }
 
         fileScanner.close();
+        final long endTime = System.currentTimeMillis();
+        System.out.println();
         System.out.println("Part 1: " + part1Sum);
         System.out.println("Part 2: " + part2Sum);
+
+        System.out.println(System.lineSeparator() + "Total execution time: " + (endTime - startTime) + "ms");
     }
 
     private static char firstDigit(String line, boolean includeDigitNames) {
