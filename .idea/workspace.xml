@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="Refactored file read.">
+    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="Everything works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/src/main/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/src/main/MainDay2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/src/main/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/src/main/resources/inputDay2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day6/src/main/MainDay6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day6/src/main/resources/inputDay6.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/day7/src/main/CardHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/CardHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day7/src/main/MainDay7.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/MainDay7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +116,7 @@
       <workItem from="1701941482061" duration="713000" />
       <workItem from="1701970664725" duration="1755000" />
       <workItem from="1701972555299" duration="9933000" />
-      <workItem from="1702026255815" duration="1846000" />
+      <workItem from="1702026255815" duration="2533000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1701359659025</created>
@@ -223,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702027556075</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Theoretically should be able to handle part 2.">
+      <option name="closed" value="true" />
+      <created>1702028146469</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702028146469</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Everything works!">
+      <option name="closed" value="true" />
+      <created>1702028469413</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702028469413</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +253,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-" />
     <MESSAGE value="Refactored file read." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored file read." />
+    <MESSAGE value="Theoretically should be able to handle part 2." />
+    <MESSAGE value="Everything works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything works!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

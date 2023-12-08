@@ -33,7 +33,7 @@ public class CardHand implements Comparable<CardHand> {
 
         @FunctionalInterface
         private interface TypeIdentifier {
-            boolean isOfType(List<Card> cards);
+            boolean identify(List<Card> cards);
 
         }
         private final TypeIdentifier identifier;
@@ -59,11 +59,18 @@ public class CardHand implements Comparable<CardHand> {
 
         public static HandType byCardList(List<Card> cards) {
             for (int i = HandType.values().length - 1; i >= 0; i--) {
-                if (values()[i].identifier.isOfType(replaceJoker(cards))) {
+                if (values()[i].identifier.identify(replaceJoker(cards))) {
                     return values()[i];
                 }
             }
             throw new IllegalArgumentException("Something went wrong with your hand.");
+        }
+
+        private static Map<Card, Integer> cardTypeToAmountMap(List<Card> cards) {
+            final Map<Card, Integer> cardAmounts = new HashMap<>();
+            Arrays.stream(Card.values()).forEach(card -> cardAmounts.put(card, 0));
+            cards.forEach(card -> cardAmounts.put(card, cardAmounts.get(card) + 1));
+            return cardAmounts;
         }
 
         private static List<Card> replaceJoker(List<Card> cards) {
@@ -79,9 +86,10 @@ public class CardHand implements Comparable<CardHand> {
                     .toList());
         }
     }
-    private static final int HAND_SIZE = 5;
 
+    private static final int HAND_SIZE = 5;
     private final List<Card> cards;
+
     private final HandType type;
 
     public CardHand(List<Card> cards) {
@@ -107,11 +115,5 @@ public class CardHand implements Comparable<CardHand> {
             }
         }
         return 0;
-    }
-    private static Map<Card, Integer> cardTypeToAmountMap(List<Card> cards) {
-        final Map<Card, Integer> cardAmounts = new HashMap<>();
-        Arrays.stream(Card.values()).forEach(card -> cardAmounts.put(card, 0));
-        cards.forEach(card -> cardAmounts.put(card, cardAmounts.get(card) + 1));
-        return cardAmounts;
     }
 }
