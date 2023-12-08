@@ -1,7 +1,7 @@
 package main;
 
 public enum Card {
-    JOKER('$'),
+    JOKER('j'),
     TWO('2'),
     THREE('3'),
     FOUR('4'),
