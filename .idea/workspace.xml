@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="Everything works!">
+    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="Removed unfinished stuff, formatted some files.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/src/main/Color.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/src/main/MainDay2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/src/main/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/src/main/resources/inputDay2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day6/src/main/MainDay6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day6/src/main/resources/inputDay6.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/day7/src/main/CardHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/CardHand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,28 +36,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Card.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainDay7.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last.edited.regexp": "Sample Text",
-    "last_opened_file_path": "C:/Users/m1lor/IdeaProjects/AdventOfCode/day6/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Card.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainDay7.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last.edited.regexp&quot;: &quot;Sample Text&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/m1lor/IdeaProjects/AdventOfCode/day6/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\m1lor\IdeaProjects\AdventOfCode\day6\src\main\resources" />
@@ -116,7 +110,8 @@
       <workItem from="1701941482061" duration="713000" />
       <workItem from="1701970664725" duration="1755000" />
       <workItem from="1701972555299" duration="9933000" />
-      <workItem from="1702026255815" duration="2533000" />
+      <workItem from="1702026255815" duration="2971000" />
+      <workItem from="1702029252406" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1701359659025</created>
@@ -244,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702028469413</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Removed unfinished stuff, formatted some files.">
+      <option name="closed" value="true" />
+      <created>1702028824359</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702028824359</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +258,8 @@
     <MESSAGE value="Refactored file read." />
     <MESSAGE value="Theoretically should be able to handle part 2." />
     <MESSAGE value="Everything works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything works!" />
+    <MESSAGE value="Removed unfinished stuff, formatted some files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unfinished stuff, formatted some files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

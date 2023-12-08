@@ -59,8 +59,9 @@ public class MainDay7 {
             result += i * handAndBids.get(i - 1).bid;
         }
 
-        System.out.println(System.lineSeparator() + result);
+        System.out.println(System.lineSeparator() + "Result: " + result);
     }
+
     private static HandAndBid parse(String line) {
         final String[] result = line.split(" ");
         return new HandAndBid(new CardHand(stringToCards(result[0])), Integer.parseInt(result[1]));

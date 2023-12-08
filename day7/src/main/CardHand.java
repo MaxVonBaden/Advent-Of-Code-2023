@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class CardHand implements Comparable<CardHand> {
     private enum HandType {
-        HIGH_CARD(HandType::allCardsAreDistinct),
+        HIGH_CARD(cards -> (new HashSet<>(cards)).size() == cards.size()),
         ONE_PAIR(cards -> pairCount(cardTypeToAmountMap(cards)) == 1),
         TWO_PAIR(cards -> pairCount(cardTypeToAmountMap(cards)) == 2),
         THREE_OF_A_KIND(cards ->
@@ -29,7 +29,7 @@ public class CardHand implements Comparable<CardHand> {
                         .map(cardCount -> cardCount == 4)
                         .reduce(Boolean::logicalOr).get()
         ),
-        FIVE_OF_A_KIND(HandType::allCardsAreTheSame);
+        FIVE_OF_A_KIND(cards -> (new HashSet<>(cards)).size() == 1);
 
         @FunctionalInterface
         private interface TypeIdentifier {
@@ -43,18 +43,10 @@ public class CardHand implements Comparable<CardHand> {
         }
 
         private static int pairCount(Map<Card, Integer> cardAmounts) {
-            return cardAmounts.entrySet().stream()
-                    .filter(entry -> entry.getValue() == 2)
+            return cardAmounts.values().stream()
+                    .filter(value -> value == 2)
                     .toList()
                     .size();
-        }
-
-        private static boolean allCardsAreDistinct(List<Card> cards) {
-            return (new HashSet<>(cards)).size() == cards.size();
-        }
-
-        private static boolean allCardsAreTheSame(List<Card> cards) {
-            return (new HashSet<>(cards)).size() == 1;
         }
 
         public static HandType byCardList(List<Card> cards) {
@@ -98,9 +90,6 @@ public class CardHand implements Comparable<CardHand> {
         }
         this.cards = new ArrayList<>(cards);
         this.type = HandType.byCardList(cards);
-        if (this.type == null) {
-            throw new IllegalArgumentException("Something went wrong with your set of cards.");
-        }
     }
 
     @Override
