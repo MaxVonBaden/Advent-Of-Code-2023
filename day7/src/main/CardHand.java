@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class CardHand implements Comparable<CardHand> {
     private enum HandType {
@@ -33,8 +34,8 @@ public class CardHand implements Comparable<CardHand> {
         @FunctionalInterface
         private interface TypeIdentifier {
             boolean isOfType(List<Card> cards);
-        }
 
+        }
         private final TypeIdentifier identifier;
 
         HandType(TypeIdentifier identifier) {
@@ -58,14 +59,26 @@ public class CardHand implements Comparable<CardHand> {
 
         public static HandType byCardList(List<Card> cards) {
             for (int i = HandType.values().length - 1; i >= 0; i--) {
-                if (values()[i].identifier.isOfType(cards)) {
+                if (values()[i].identifier.isOfType(replaceJoker(cards))) {
                     return values()[i];
                 }
             }
             throw new IllegalArgumentException("Something went wrong with your hand.");
         }
-    }
 
+        private static List<Card> replaceJoker(List<Card> cards) {
+            final Optional<Card> mostCommonCard = cardTypeToAmountMap(cards).entrySet().stream()
+                    .filter(entry -> !entry.getKey().equals(Card.JOKER))
+                    .max(Map.Entry.comparingByValue())
+                    .map(Map.Entry::getKey);
+
+            return mostCommonCard.map(value -> cards.stream()
+                    .map(card -> card.equals(Card.JOKER) ? value : card)
+                    .toList()).orElseGet(() -> cards.stream()
+                    .map(card -> Card.TWO)
+                    .toList());
+        }
+    }
     private static final int HAND_SIZE = 5;
 
     private final List<Card> cards;
@@ -95,7 +108,6 @@ public class CardHand implements Comparable<CardHand> {
         }
         return 0;
     }
-
     private static Map<Card, Integer> cardTypeToAmountMap(List<Card> cards) {
         final Map<Card, Integer> cardAmounts = new HashMap<>();
         Arrays.stream(Card.values()).forEach(card -> cardAmounts.put(card, 0));

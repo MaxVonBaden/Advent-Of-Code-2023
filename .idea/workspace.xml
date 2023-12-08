@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="-">
+    <list default="true" id="5e6eddcb-c62e-4bc5-8c39-a743ac063d4b" name="Changes" comment="Refactored file read.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day7/src/main/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day7/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/MainDay7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day7/src/main/CardHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/CardHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day7/src/main/MainDay7.java" beforeDir="false" afterPath="$PROJECT_DIR$/day7/src/main/MainDay7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,7 @@
       <workItem from="1701941482061" duration="713000" />
       <workItem from="1701970664725" duration="1755000" />
       <workItem from="1701972555299" duration="9933000" />
-      <workItem from="1702026255815" duration="958000" />
+      <workItem from="1702026255815" duration="1846000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1701359659025</created>
@@ -207,7 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701982120207</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Refactored file read.">
+      <option name="closed" value="true" />
+      <created>1702027248424</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702027248424</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Refactored file read.">
+      <option name="closed" value="true" />
+      <created>1702027556075</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702027556075</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +231,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-" />
+    <MESSAGE value="Refactored file read." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored file read." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

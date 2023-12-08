@@ -3,7 +3,6 @@ package main;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -60,7 +59,7 @@ public class MainDay7 {
             result += i * handAndBids.get(i - 1).bid;
         }
 
-        System.out.println(result);
+        System.out.println(System.lineSeparator() + result);
     }
     private static HandAndBid parse(String line) {
         final String[] result = line.split(" ");
