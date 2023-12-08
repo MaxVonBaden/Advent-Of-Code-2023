@@ -4,12 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-@SuppressWarnings("DuplicatedCode")
+
 public class MainDay7 {
     private record HandAndBid(CardHand hand, int bid) implements Comparable<HandAndBid> {
         @Override
@@ -31,7 +30,7 @@ public class MainDay7 {
             return;
         }
 
-        List<HandAndBid> handAndBids = new ArrayList<>();
+        final List<HandAndBid> handAndBids;
 
         System.out.print("Chose part: ");
         switch (commandLineScanner.nextLine()) {
@@ -48,7 +47,10 @@ public class MainDay7 {
                     .map(MainDay7::parse)
                     .sorted()
                     .toList();
-            default -> System.err.println("Chose part 1 or 2.");
+            default -> {
+                System.err.println("Chose part 1 or 2.");
+                return;
+            }
         }
         commandLineScanner.close();
 

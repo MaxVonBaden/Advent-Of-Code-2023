@@ -13,8 +13,8 @@ public class CardHand implements Comparable<CardHand> {
         ONE_PAIR(cards -> pairCount(cardTypeToAmountMap(cards)) == 1),
         TWO_PAIR(cards -> pairCount(cardTypeToAmountMap(cards)) == 2),
         THREE_OF_A_KIND(cards ->
-                cardTypeToAmountMap(cards).entrySet().stream()
-                        .map(entry -> entry.getValue() == 3)
+                cardTypeToAmountMap(cards).values().stream()
+                        .map(cardCount -> cardCount == 3)
                         .reduce(Boolean::logicalOr).get()
         ),
         FULL_HOUSE(cards -> cardTypeToAmountMap(cards).entrySet().stream()
@@ -101,21 +101,5 @@ public class CardHand implements Comparable<CardHand> {
         Arrays.stream(Card.values()).forEach(card -> cardAmounts.put(card, 0));
         cards.forEach(card -> cardAmounts.put(card, cardAmounts.get(card) + 1));
         return cardAmounts;
-    }
-
-    public String toString() {
-        final StringBuilder result =  new StringBuilder();
-        this.cards.forEach(card -> result.append(card.getCharacter()));
-        result.append(", %s".formatted(this.type.toString()));
-        return result.toString();
-    }
-
-    private static HandType[] reverse(HandType[] input) {
-        final HandType[] result = new HandType[HandType.values().length];
-        for (int i = HandType.values().length - 1; i >= 0; i--) {
-            result[HandType.values().length - 1 - i] = HandType.values()[i];
-        }
-
-        return result;
     }
 }
